@@ -99,10 +99,12 @@ class CGMap(torch.nn.Module):
             (32, 48),
             (48, 58)
         ]
-        self.group_weights = Parameter(
-            torch.tensor([0.05, 0.05, 0.6, 2.3]),
-            requires_grad=True
-        )
+        if hasattr(args, 'initial_weights') and args.initial_weights is not None:
+            initial_weights = torch.tensor(args.initial_weights)
+        else:
+            initial_weights = torch.tensor([0.05, 0.05, 0.6, 2.3])
+
+        self.group_weights = Parameter(initial_weights, requires_grad=True)
 
     def reset_parameters(self):
         self.feature_transform.reset_parameters()
@@ -127,5 +129,4 @@ class CGMap(torch.nn.Module):
         x = self.output_layer(x)
         embed = self.propagation(x, self.args.hop_edge_index, self.args.hop_edge_att)
         x = torch.sum(embed, dim=1)
-
         return x
