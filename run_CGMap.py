@@ -22,24 +22,22 @@ from utils import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', type=str, default='CGMap', help='Model name, options:[MTGCN, EMOGI, Chebnet, GAT, GCN, SVM].')
-parser.add_argument('--epochs', type=int, default=5000, help='Number of epochs to train.')
-parser.add_argument('--lr', type=float, default=0.001, help='Initial learning rate.')
+parser.add_argument('--epochs', type=int, default=100, help='Number of epochs to train.')
+parser.add_argument('--lr', type=float, default=0.0016, help='Initial learning rate.')
+parser.add_argument('--alpha', type=float, default=0.04)
+parser.add_argument('--gamma', type=float, default=7.0)
 parser.add_argument('--device', type=int, default=0, help='The id of GPU.')
-parser.add_argument('--dropout', type=float, default=0.6)
-parser.add_argument('--theta', type=float, default=0.95)
+parser.add_argument('--dropout', type=float, default=0.32)
+parser.add_argument('--i_w', nargs=4, type=float, default=[0.05, 0.05, 0.6, 2.3])
+parser.add_argument('--theta', type=float, default=0.93)
 parser.add_argument('--cross_validation', type=bool, default=True, help='Run 5-CV test.')
-parser.add_argument('--w_decay', type=float, default=0.00001, help='Weight decay (L2 loss on parameters).')
+parser.add_argument('--w_decay', type=float, default=0.00063, help='Weight decay (L2 loss on parameters).')
 parser.add_argument('--dataset', type=str, default='PPNet')
 parser.add_argument('--OPP_layer', type=int, default=10)
-parser.add_argument('--layers', nargs='+', type=int)
-parser.add_argument('--OPP_dataset', type=str, default='PPNet')
+parser.add_argument('--layers', nargs='+', type=int, default=[1], help='Layer sizes (e.g., 1 2 3...10)')
 parser.add_argument('--agg', type=str, default='sum')
-parser.add_argument('--hidden', type=int, default=128)
-parser.add_argument('--dr', type=float, default=0)
-parser.add_argument('--Init', type=str, choices=['SGC', 'PPR', 'NPPR', 'Random', 'WS'],
-                        default='PPR')
-parser.add_argument('--num_layers', type=int, default=10)
-
+parser.add_argument('--hidden', type=int, default=413)
+parser.add_argument('--Init', type=str, choices=['PPR', 'NPPR', 'Random', 'WS'], default='PPR')
 args = parser.parse_args()
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
@@ -72,7 +70,7 @@ data = data.to(device)
 
 
 def save_predicted_driver_genes(model, data, threshold=0.5, output_file=f'{args.dataset}_{args.model}.csv'):
-    model.eval()  # Set model to evaluation mode
+    model.eval()
     with torch.no_grad():
         output = model(data)
         pred_prob = torch.sigmoid(output).cpu().numpy()  # Apply sigmoid to get probabilities
@@ -149,7 +147,7 @@ for i in range(10):
                 pred = model(data)
                 pos_weight = torch.tensor([data.y[tr_mask].sum() / (len(data.y[tr_mask]) - data.y[tr_mask].sum())]).to(device)
                 bce_loss = F.binary_cross_entropy_with_logits(pred[tr_mask], data.y[tr_mask].view(-1, 1), pos_weight=pos_weight)
-                foc_loss = focal_loss(pred[tr_mask], data.y[tr_mask].view(-1, 1), alpha=0.45, gamma=6.0)
+                foc_loss = focal_loss(pred[tr_mask], data.y[tr_mask].view(-1, 1), alpha=args.alpha, gamma=args.gamma)
                 loss = args.theta * bce_loss + (1-args.theta) * foc_loss
             else:
                 pred = model(data)
