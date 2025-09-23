@@ -51,3 +51,11 @@ python
 ## Additional datasets
 Network of Cancer Genes (NCG 7.2):
 http://network-cancer-genes.org/
+
+Pytorch Geometirc benchmarks:
+https://github.com/pyg-team/pytorch_geometric
+
+Optuna v4/v5 framework:
+https://github.com/optuna/optuna
+
+
