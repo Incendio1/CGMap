@@ -28,10 +28,13 @@ scikit-learn Version: 1.2.2
 ### Installation
 The following PyG versions are recommended:
 ```bash
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
-pip install torch-sparse -f https://pytorch-f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
-pip install pytorch-geometric==2.3.1
+python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
+```
+```bash
+python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
+```
+```bash
+python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
 ```
 
 ## Running the Project
