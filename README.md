@@ -28,13 +28,10 @@ scikit-learn Version: 1.2.2
 ### Installation
 The following PyG versions are recommended:
 ```bash
-python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
-```
-```bash
-python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
-```
-```bash
-python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
+pip install torch-sparse -f https://pytorch-f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
+pip install pytorch-geometric==2.3.1
 ```
 
 ## Running the Project
@@ -42,14 +39,13 @@ Since CGMap employs a width-oriented parallel propagation algorithm, it can loca
 
 Then, execute the project by running the following command and configuration:
 ```bash
-Python Version: 3.8
-PyTorch Version: 1.12.1
-CUDA Version: 11.3
-Numpy Version: 1.24.3
-Pandas Version: 2.0.2
-Networkx Version: 3.1
-Pytroch Geometric Version: 2.3.1
-scikit-learn Version: 1.2.2
+python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
+```
+```bash
+python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
+```
+```bash
+python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
 ```
 
 ## Additional datasets
