@@ -63,66 +63,6 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 ## Overall Results on PPI, PathNet and GGNet in 5-CV Test
 
 ### PPI (H.R=0.899)
-
-| Method | AUC | AUPR | TIME* |
-|:-------|:---:|:---:|:---:|
-| GCN | 80.10 | 72.08 | 0.0140 |
-| GAT | 77.77 | 69.29 | 0.0192 |
-| GATv2 | 80.64 | 73.17 | 0.0495 |
-| ChebNet | 81.14 | 75.62 | 0.0145 |
-| ARMAGNN | 79.42 | <u>78.98</u> | 0.0103 |
-| TAGCN | 82.58 | 78.50 | 0.0108 |
-| PMLP | 65.80 | 47.86 | **0.0023** |
-| AGNN | 80.61 | 72.56 | 0.0161 |
-| JKNet | 81.22 | 75.15 | 0.0195 |
-| EMOGI | 81.92 | 75.72 | 0.0150 |
-| MTGCN | <u>82.88</u> | 78.75 | 0.9344 |
-| CGMega | 80.49 | 76.16 | 0.0214 |
-| **CGMap** | **87.07** | **83.95** | <u>0.0065</u> |
-
-### PathNet (H.R=0.876)
-
-| Method | AUC | AUPR | TIME* |
-|:-------|:---:|:---:|:---:|
-| GCN | 79.64 | 76.83 | 0.0059 |
-| GAT | 74.95 | 71.71 | 0.0113 |
-| GATv2 | 78.86 | 73.42 | 0.0197 |
-| ChebNet | 82.37 | 81.48 | 0.0098 |
-| ARMAGNN | 79.98 | 82.12 | 0.0072 |
-| TAGCN | 84.39 | 82.68 | 0.0079 |
-| PMLP | 55.86 | 49.78 | **0.0023** |
-| AGNN | 78.50 | 70.21 | 0.0082 |
-| JKNet | 80.04 | 75.24 | 0.0108 |
-| EMOGI | 82.48 | 81.64 | 0.0980 |
-| MTGCN | <u>84.43</u> | <u>82.86</u> | 0.2980 |
-| CGMega | 80.23 | 78.51 | 0.0157 |
-| **CGMap** | **86.01** | **85.23** | <u>0.0053</u> |
-
-### GGNet (H.R=0.943)
-
-| Method | AUC | AUPR | TIME* |
-|:-------|:---:|:---:|:---:|
-| GCN | 61.17 | 50.46 | 0.0238 |
-| GAT | 60.20 | 47.57 | 0.0342 |
-| GATv2 | 68.37 | 57.16 | 0.0994 |
-| ChebNet | 78.28 | 71.50 | 0.0255 |
-| ARMAGNN | 75.01 | 73.79 | 0.0172 |
-| TAGCN | <u>81.34</u> | <u>75.65</u> | 0.0206 |
-| PMLP | 57.44 | 45.97 | **0.0023** |
-| AGNN | 70.35 | 58.82 | 0.0300 |
-| JKNet | 64.84 | 55.85 | 0.0357 |
-| EMOGI | 78.73 | 72.69 | 0.0258 |
-| MTGCN | 81.18 | 73.70 | 2.0766 |
-| CGMega | 78.29 | 71.63 | 0.0205 |
-| **CGMap** | **85.68** | **81.15** | <u>0.0057</u> |
-
-
-
-## Overall Results on PPI, PathNet and GGNet in 5-CV Test
-
-**Bold** indicates the best performance and <u>underlining</u> indicates 2<sup>nd</sup> best
-
-### PPI (H.R=0.899)
 | Method | AUC | AUPR | TIME* | Method | AUC | AUPR | TIME* |
 |:-------|:---:|:---:|:---:|:-------|:---:|:---:|:---:|
 | GCN | 80.10 | 72.08 | 0.0140 | ARMAGNN | 79.42 | <u>78.98</u> | 0.0103 |
@@ -154,5 +94,3 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | JKNet | 64.84 | 55.85 | 0.0357 | EMOGI | 78.73 | 72.69 | 0.0258 |
 | MTGCN | 81.18 | 73.70 | 2.0766 | CGMega | 78.29 | 71.63 | 0.0205 |
 | **CGMap** | **85.68** | **81.15** | <u>0.0057</u> | | | | |
-
-*Record the training time (s) for each epoch.*
