@@ -60,13 +60,7 @@ https://github.com/optuna/optuna
 
 an example of building a cancer-specific dataset using `customize_dataset.py`
 
-## Overall Results on PPI, PathNet and GGNet in 5-CV Test
-
-
-
-
-
-## Overall Results on PPI, PathNet and GGNet in 5-CV Test
+## Cancer genes identification results
 
 <details>
 <summary>📊 PPI Results (H.R=0.899) - Click to expand</summary>
