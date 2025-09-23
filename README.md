@@ -62,8 +62,6 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 
 ## Overall Results on PPI, PathNet and GGNet in 5-CV Test
 
-**Bold** indicates the best performance and <u>underlining</u> indicates 2<sup>nd</sup> best
-
 ### PPI (H.R=0.899)
 
 | Method | AUC | AUPR | TIME* |
@@ -117,5 +115,3 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | MTGCN | 81.18 | 73.70 | 2.0766 |
 | CGMega | 78.29 | 71.63 | 0.0205 |
 | **CGMap** | **85.68** | **81.15** | <u>0.0057</u> |
-
-*Record the training time (s) for each epoch.*
