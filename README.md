@@ -65,7 +65,6 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 **Bold** indicates the best performance and <u>underlining</u> indicates 2<sup>nd</sup> best
 
 | Method | PPI (H.R=0.899) | | | PathNet (H.R=0.876) | | | GGNet (H.R=0.943) | | |
-|:-------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | | **AUC** | **AUPR** | **TIME*** | **AUC** | **AUPR** | **TIME*** | **AUC** | **AUPR** | **TIME*** |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
 | GCN | 80.10 | 72.08 | 0.0140 | 79.64 | 76.83 | 0.0059 | 61.17 | 50.46 | 0.0238 |
