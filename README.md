@@ -58,7 +58,7 @@ https://github.com/pyg-team/pytorch_geometric
 Optuna v4/v5 framework:
 https://github.com/optuna/optuna
 
-an example to buliding a cancer-specific dataset by `customize_dataset.py`
+an example of building a cancer-specific dataset using `customize_dataset.py`
 
 
 
