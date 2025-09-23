@@ -23,7 +23,6 @@ Pandas Version: 2.0.2
 Networkx Version: 3.1
 Pytroch Geometric Version: 2.3.1
 scikit-learn Version: 1.2.2
-
 ```
 
 ### Installation
@@ -37,6 +36,18 @@ pip install pytorch-geometric==2.3.1
 
 ## Running the Project
 Since CGMap employs a width-oriented parallel propagation algorithm, it can locate gene associations at any distance scale in a single step, and this process can be preprocessed. Therefore, we directly provide preprocessed OPP results at a maximum distance scale of 10, available for download at https://zenodo.org/records/17178713. After downloading, simply copy the contents into the OPP_info directory. If you prefer not to download, CGMap can also automatically process all gene associations less than or equal to the value specified by the hyperparameter OPP_layer. Our dataset can be viewed in the file "data"
+
+Then, execute the project by running the following command and configuration:
+```bash
+Python Version: 3.8
+PyTorch Version: 1.12.1
+CUDA Version: 11.3
+Numpy Version: 1.24.3
+Pandas Version: 2.0.2
+Networkx Version: 3.1
+Pytroch Geometric Version: 2.3.1
+scikit-learn Version: 1.2.2
+```
 
 ## Additional datasets
 Network of Cancer Genes (NCG 7.2):
