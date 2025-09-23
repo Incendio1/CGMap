@@ -94,3 +94,44 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | JKNet | 64.84 | 55.85 | 0.0357 | EMOGI | 78.73 | 72.69 | 0.0258 |
 | MTGCN | 81.18 | 73.70 | 2.0766 | CGMega | 78.29 | 71.63 | 0.0205 |
 | **CGMap** | **85.68** | **81.15** | <u>0.0057</u> | | | | |
+
+
+
+## Overall Results on PPI, PathNet and GGNet in 5-CV Test
+
+**Bold** indicates the best performance and <u>underlining</u> indicates 2<sup>nd</sup> best
+
+<details>
+<summary>📊 PPI Results (H.R=0.899) - Click to expand</summary>
+
+| Method | AUC | AUPR | TIME* |
+|:-------|:---:|:---:|:---:|
+| GCN | 80.10 | 72.08 | 0.0140 |
+| ... | ... | ... | ... |
+| **CGMap** | **87.07** | **83.95** | <u>0.0065</u> |
+
+</details>
+
+<details>
+<summary>📊 PathNet Results (H.R=0.876) - Click to expand</summary>
+
+| Method | AUC | AUPR | TIME* |
+|:-------|:---:|:---:|:---:|
+| GCN | 79.64 | 76.83 | 0.0059 |
+| ... | ... | ... | ... |
+| **CGMap** | **86.01** | **85.23** | <u>0.0053</u> |
+
+</details>
+
+<details>
+<summary>📊 GGNet Results (H.R=0.943) - Click to expand</summary>
+
+| Method | AUC | AUPR | TIME* |
+|:-------|:---:|:---:|:---:|
+| GCN | 61.17 | 50.46 | 0.0238 |
+| ... | ... | ... | ... |
+| **CGMap** | **85.68** | **81.15** | <u>0.0057</u> |
+
+</details>
+
+*Record the training time (s) for each epoch.*
