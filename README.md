@@ -112,5 +112,3 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | **CGMap** | **85.68** | **81.15** | <u>0.0057</u> | | | | |
 
 </details>
-
-* *Record the training time (s) for each epoch.*
