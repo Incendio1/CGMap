@@ -62,7 +62,15 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 
 ## Overall Results on PPI, PathNet and GGNet in 5-CV Test
 
-### PPI (H.R=0.899)
+
+
+
+
+## Overall Results on PPI, PathNet and GGNet in 5-CV Test
+
+<details>
+<summary>📊 PPI Results (H.R=0.899) - Click to expand</summary>
+  
 | Method | AUC | AUPR | TIME* | Method | AUC | AUPR | TIME* |
 |:-------|:---:|:---:|:---:|:-------|:---:|:---:|:---:|
 | GCN | 80.10 | 72.08 | 0.0140 | ARMAGNN | 79.42 | <u>78.98</u> | 0.0103 |
@@ -73,7 +81,11 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | MTGCN | <u>82.88</u> | 78.75 | 0.9344 | CGMega | 80.49 | 76.16 | 0.0214 |
 | **CGMap** | **87.07** | **83.95** | <u>0.0065</u> | | | | |
 
-### PathNet (H.R=0.876)
+</details>
+
+<details>
+<summary>📊 PathNet Results (H.R=0.876) - Click to expand</summary>
+
 | Method | AUC | AUPR | TIME* | Method | AUC | AUPR | TIME* |
 |:-------|:---:|:---:|:---:|:-------|:---:|:---:|:---:|
 | GCN | 79.64 | 76.83 | 0.0059 | ARMAGNN | 79.98 | 82.12 | 0.0072 |
@@ -84,7 +96,11 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | MTGCN | <u>84.43</u> | <u>82.86</u> | 0.2980 | CGMega | 80.23 | 78.51 | 0.0157 |
 | **CGMap** | **86.01** | **85.23** | <u>0.0053</u> | | | | |
 
-### GGNet (H.R=0.943)
+</details>
+
+<details>
+<summary>📊 GGNet Results (H.R=0.943) - Click to expand</summary>
+
 | Method | AUC | AUPR | TIME* | Method | AUC | AUPR | TIME* |
 |:-------|:---:|:---:|:---:|:-------|:---:|:---:|:---:|
 | GCN | 61.17 | 50.46 | 0.0238 | ARMAGNN | 75.01 | 73.79 | 0.0172 |
@@ -95,43 +111,6 @@ an example of building a cancer-specific dataset using `customize_dataset.py`
 | MTGCN | 81.18 | 73.70 | 2.0766 | CGMega | 78.29 | 71.63 | 0.0205 |
 | **CGMap** | **85.68** | **81.15** | <u>0.0057</u> | | | | |
 
-
-
-## Overall Results on PPI, PathNet and GGNet in 5-CV Test
-
-**Bold** indicates the best performance and <u>underlining</u> indicates 2<sup>nd</sup> best
-
-<details>
-<summary>📊 PPI Results (H.R=0.899) - Click to expand</summary>
-
-| Method | AUC | AUPR | TIME* |
-|:-------|:---:|:---:|:---:|
-| GCN | 80.10 | 72.08 | 0.0140 |
-| ... | ... | ... | ... |
-| **CGMap** | **87.07** | **83.95** | <u>0.0065</u> |
-
 </details>
 
-<details>
-<summary>📊 PathNet Results (H.R=0.876) - Click to expand</summary>
-
-| Method | AUC | AUPR | TIME* |
-|:-------|:---:|:---:|:---:|
-| GCN | 79.64 | 76.83 | 0.0059 |
-| ... | ... | ... | ... |
-| **CGMap** | **86.01** | **85.23** | <u>0.0053</u> |
-
-</details>
-
-<details>
-<summary>📊 GGNet Results (H.R=0.943) - Click to expand</summary>
-
-| Method | AUC | AUPR | TIME* |
-|:-------|:---:|:---:|:---:|
-| GCN | 61.17 | 50.46 | 0.0238 |
-| ... | ... | ... | ... |
-| **CGMap** | **85.68** | **81.15** | <u>0.0057</u> |
-
-</details>
-
-*Record the training time (s) for each epoch.*
+* *Record the training time (s) for each epoch.*
