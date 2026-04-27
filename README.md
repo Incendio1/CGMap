@@ -1,4 +1,4 @@
-# Advancing interpretable cancer gene identification via width scaling graph representation learning
+# CGMap: interpretable computational screening of cancer genes via width-scaled graph learning
 
 >  **The implementation of CGMap & data accompanying the manuscript submitted to _Nature Biomedical Engineering_.**   
 
