@@ -1,6 +1,6 @@
 # Advancing interpretable cancer gene identification via width scaling graph representation learning
 
->  **The implementation of CGMap & data accompanying the manuscript submitted to _Nature Machine Intelligence_.**   
+>  **The implementation of CGMap & data accompanying the manuscript submitted to _Nature Biomedical Engineering_.**   
 
 ---
 
