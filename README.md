@@ -1,6 +1,6 @@
 # CGMap: interpretable computational screening of cancer genes via width-scaled graph learning
 
->  **The implementation of CGMap & data accompanying the manuscript submitted to _Nature Biomedical Engineering_.**   
+>  **The implementation of CGMap & data accompanying the manuscript submitted to _Nature Machine Intelligence_.**   
 
 ---
 
