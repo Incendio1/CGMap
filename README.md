@@ -42,10 +42,10 @@ Execute the project by running the following command and configuration:
 python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --agg sum --theta 0.9 --alpha 0.45 --gamma 6.0
 ```
 ```bash
-python run_CGMap.py --model "CGMap" --device 0 --dataset GGNet --agg sum --i_w 0.51 0.5 0.1 1.1 --lr 0.00046 --dropout 0.49 --epoch 2500 --hidden 101 --w_decay 3.7e-06 
+python run_CGMap.py --model "CGMap" --device 0 --dataset GGNet --agg sum --i_w 0.51 0.5 0.1 1.1 --lr 0.00046 --dropout 0.49 --epochs 2500 --hidden 101 --w_decay 3.7e-06 
 ```
 ```bash
-python run_CGMap.py --model "CGMap" --device 0 --dataset PathNet --agg sum --i_w 0.2 0.1 0.006 2.5 --lr 0.00072 --dropout 0.61 --alpha 0.37 --gamma 5 --epoch 1900 --w_decay 2.7e-07
+python run_CGMap.py --model "CGMap" --device 0 --dataset PathNet --agg sum --i_w 0.2 0.1 0.006 2.5 --lr 0.00072 --dropout 0.61 --alpha 0.37 --gamma 5 --epoch 1900s --w_decay 2.7e-07
 ```
 
 ## Additional datasets
