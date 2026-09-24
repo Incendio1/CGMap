@@ -1,4 +1,4 @@
-# CGMap: interpretable computational screening of cancer genes via width-scaled graph learning
+# CGMap: interpretable distance resolved graph learning for cancer gene priority screening
 
 >  **The implementation of CGMap & data accompanying the manuscript submitted to _Nature Machine Intelligence_.**   
 
