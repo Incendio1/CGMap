@@ -21,7 +21,7 @@ CUDA Version: 11.3
 Numpy Version: 1.24.3
 Pandas Version: 2.0.2
 Networkx Version: 3.1
-Pytroch Geometric Version: 2.6.1
+PyTorch Geometric Version: 2.6.1
 scikit-learn Version: 1.2.2
 ```
 
@@ -29,9 +29,9 @@ scikit-learn Version: 1.2.2
 The following PyG versions are recommended:
 ```bash
 pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
-pip install torch-sparse -f https://pytorch-f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
 pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+cu113.html
-pip install pytorch-geometric==2.3.1
+pip install pytorch-geometric==2.6.1
 ```
 
 ## Running the Project
@@ -39,7 +39,7 @@ Since CGMap employs a distance-resolved parallel propagation algorithm, it can l
 
 Execute the project by running the following command and configuration:
 ```bash
-python run_CGMap.py --dataset PathNet --Init SignedPPR --i_w 0.2 0.1 0.006 2.5 --lr 0.00072 --dropout 0.61 --epochs 1900 --w_decay 2.7e-07 --alpha 0.37 --gamma 5.0 --theta 0.9
+python run_CGMap.py --model "CGMap" --device 0 --agg sum --dataset PathNet --Init SignedPPR --i_w 0.2 0.1 0.006 2.5 --lr 0.00072 --dropout 0.61 --epochs 1900 --w_decay 2.7e-07 --alpha 0.37 --gamma 5.0 --theta 0.9 --OPP_layer 10
 ```
 ```bash
 python run_CGMap.py --model "CGMap" --device 0 --dataset PathNet --agg sum --layers 1 2 3 4 5 6 7 8 9 10 --Init SignedPPR --OPP_layer 10 --i_w 0.2 0.1 0.006 2.5 --lr 0.00072 --dropout 0.61 --alpha 0.37 --gamma 5.0 --epochs 1900 --w_decay 2.7e-07 --theta 0.9
@@ -62,7 +62,7 @@ https://github.com/pyg-team/pytorch_geometric
 Optuna v4/v5 framework:
 https://github.com/optuna/optuna
 
-an example of building a cancer-specific dataset using `customize_dataset.py`
+Building a cancer-specific dataset using `customize_dataset.py`
 
 ## Cancer genes identification results
 
