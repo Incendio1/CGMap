@@ -49,10 +49,7 @@ python run_CGMap.py --model "CGMap" --device 0 --dataset PPNet --layers 1 --Init
 
 ```
 ```bash
-python run_CGMap.py --model "CGMap" --device 0 --dataset GGNet --agg sum \
-  --layers 1 2 3 4 5 6 7 8 9 10 --Init SignedPPR --OPP_layer 10 \
-  --i_w 0.51 0.5 0.1 1.1 --lr 0.00046 --dropout 0.49 \
-  --epochs 2500 --hidden 101 --w_decay 3.7e-06 --theta 0.9
+python run_CGMap.py --model "CGMap" --device 0 --dataset GGNet --agg sum --layers 1 2 3 4 5 6 7 8 9 10 --Init SignedPPR --OPP_layer 10 --i_w 0.51 0.5 0.1 1.1 --lr 0.00046 --dropout 0.49 --epochs 2500 --hidden 101 --w_decay 3.7e-06 --theta 0.9
 ```
 
 ## Additional datasets
