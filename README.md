@@ -56,7 +56,7 @@ python run_CGMap.py --model "CGMap" --device 0 --dataset GGNet --agg sum --layer
 Network of Cancer Genes (NCG 7.2):
 http://network-cancer-genes.org/
 
-Pytorch Geometirc benchmarks:
+PyTorch Geometirc benchmarks:
 https://github.com/pyg-team/pytorch_geometric
 
 Optuna v4/v5 framework:
